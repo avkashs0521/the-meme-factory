@@ -127,14 +127,6 @@ cd meme-factory
 
 ---
 
-## 📅 Milestone 1 Status
-
-✅ Project Idea Finalized
-✅ API Selected
-✅ Repository Created
-✅ README Completed
-
----
 
 ## 👤 Author
 
