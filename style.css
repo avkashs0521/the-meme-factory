@@ -1,12 +1,11 @@
-
 :root {
   --bg: #111;
-  --card: #1b1b1b;
-  --border: #2a2a2a;
-  --text: #eee;
-  --muted: #888;
+  --card-bg: #1b1b1b;
+  --borderClr: #2a2a2a;
+  --text-main: #eee;
+  --text-dim: #888;
   --accent: #f5c518;
-  --danger: #ff4d4d;
+  --danger-red: #ff4d4d;
 }
 
 * {
@@ -17,16 +16,15 @@
 
 body {
   background: var(--bg);
-  color: var(--text);
+  color: var(--text-main);
   font-family: system-ui, sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-
 .header {
-  background: var(--card);
+  background: var(--card-bg);
   border-bottom: 2px solid var(--accent);
   text-align: center;
   padding: 20px;
@@ -49,9 +47,8 @@ body {
 
 .tagline {
   font-size: 0.9rem;
-  color: var(--muted);
+  color: var(--text-dim);
 }
-
 
 .main {
   flex: 1;
@@ -60,6 +57,46 @@ body {
   padding: 30px 15px;
 }
 
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.search-box input {
+  background: var(--card-bg);
+  border: 1px solid var(--borderClr);
+  color: var(--text-main);
+  padding: 10px 15px;
+  border-radius: 8px;
+  width: 300px;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: var(--accent);
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+select {
+  background: var(--card-bg);
+  border: 1px solid var(--borderClr);
+  color: var(--text-main);
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+}
+
+select:focus {
+  border-color: var(--accent);
+}
 
 .loader {
   text-align: center;
@@ -74,7 +111,7 @@ body {
   width: 40px;
   height: 40px;
   margin: auto;
-  border: 4px solid var(--border);
+  border: 4px solid var(--borderClr);
   border-top: 4px solid var(--accent);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
@@ -82,17 +119,19 @@ body {
 
 .loader-text {
   margin-top: 10px;
-  color: var(--muted);
+  color: var(--text-dim);
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .error-box {
   background: #2a1111;
-  color: var(--danger);
-  border: 1px solid var(--danger);
+  color: var(--danger-red);
+  border: 1px solid var(--danger-red);
   padding: 15px;
   text-align: center;
   max-width: 400px;
@@ -103,28 +142,25 @@ body {
   display: none;
 }
 
-
 .meme-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 18px;
 }
 
-
 .meme-card {
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: var(--card-bg);
+  border: 1px solid var(--borderClr);
   overflow: hidden;
   cursor: pointer;
-  transition: 0.2s;
   border-radius: 25px;
+  transition: 0.2s;
 }
 
 .meme-card:hover {
   transform: translateY(-3px);
   border-color: var(--accent);
 }
-
 
 .meme-img-wrapper {
   aspect-ratio: 1;
@@ -137,7 +173,6 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
 
 .meme-info {
   padding: 10px;
@@ -153,9 +188,8 @@ body {
 
 .meme-meta {
   font-size: 0.75rem;
-  color: var(--muted);
+  color: var(--text-dim);
 }
-
 
 .meme-badge {
   display: inline-block;
@@ -170,7 +204,17 @@ body {
   .meme-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .logo-text {
     font-size: 1.4rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box input {
+    width: 100%;
   }
 }

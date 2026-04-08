@@ -1,44 +1,96 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>The Meme Factory</title>
+
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
- 
+
 
   <header class="header">
     <div class="header-inner">
       <div class="logo">
-        <span class="logo-text">The Meme <span class="logo-accent">Factory</span></span>
+
+        <span class="logo-text">
+          The Meme <span class="logo-accent">Factory</span>
+        </span>
       </div>
-      <p class="tagline">Browse the internet's most beloved meme templates</p>
+
+      <p class="tagline">
+        Browse the internet's most beloved meme templates
+      </p>
     </div>
   </header>
- 
+
+
 
   <main class="main">
- 
+
+
+    <section class="controls">
+
+
+      <div class="search-box">
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Search memes..." 
+        />
+      </div>
+
+
+      <div class="filters">
+
+        <select id="sortSelect">
+          <option value="default">Sort by: Default</option>
+          <option value="name">Name (A-Z)</option>
+          <option value="boxes_asc">Boxes (Lo to Hi)</option>
+          <option value="boxes_desc">Boxes (Hi to Lo)</option>
+        </select>
+
+
+        <select id="filterSelect">
+          <option value="all">All Boxes</option>
+          <option value="2">Exactly 2 Boxes</option>
+          <option value="3plus">3+ Boxes</option>
+        </select>
+
+      </div>
+    </section>
+
+
 
     <div class="loader" id="loader">
       <div class="spinner"></div>
       <p class="loader-text">Loading memes...</p>
     </div>
- 
+
+
 
     <div class="error-box" id="errorBox">
-      <p id="errorMsg">Something went wrong. Please try again.</p>
+      <p id="errorMsg">
+        Something went wrong. Please try again.
+      </p>
     </div>
- 
+
+
 
     <div class="meme-grid" id="memeGrid"></div>
- 
+
   </main>
- 
- 
+
+
+
   <script src="script.js"></script>
+
+
 </body>
 </html>
