@@ -2,131 +2,61 @@
 
 ## 📌 Project Overview
 
-**The Meme Factory** is a web-based meme browser that allows users to explore, search, and interact with popular meme templates. Users can view trending memes, filter them by categories, and even preview their own custom memes using a built-in meme creator.
-
-This project focuses on building a dynamic and interactive UI while integrating real-time data from a public API.
+**The Meme Factory** is a high-fidelity, interactive meme browser built with Vanilla JavaScript and modern CSS. It allows users to explore trending meme templates from the Imgflip API, search by keyword, filter by complexity, and save their favorites.
 
 ---
 
-## 🎯 Purpose
+## ✨ Features Implemented
 
-The goal of this project is to:
+### 🛠️ Core Interactive Features (Milestone 3)
+1.  **🔍 Real-time Searching**: Filter memes instantly as you type using high-performance array `filter()`.
+2.  **🗂️ Dynamic Filtering**: Filter templates based on the number of text boxes (2 boxes or 3+ boxes) to find the perfect template for your joke.
+3.  **🔃 Intelligent Sorting**: Sort memes alphabetically (A-Z) or by complexity (Least to Most boxes or vice-versa) using the ES6 `sort()` function.
+4.  **❤️ Button Interactions**: "Like" your favorite meme templates. Your preferences are persisted using **LocalStorage**, so they remain even after you refresh the page.
+5.  **🌓 Dark/Light Mode Toggle**: A premium theme switcher that adapts the entire UI for day or night use.
 
-* Practice working with public APIs
-* Build a responsive and interactive frontend application
-* Implement search, filtering, and UI logic
-* Handle dynamic image layouts (Masonry grid)
-* Create a simple meme preview generator
-
----
-
-## 🌐 Public API Used
-
-This project uses the **Imgflip API**:
-
-🔗 https://imgflip.com/api
-
-### API Features Used:
-
-* Fetch popular meme templates
-* Access meme images and metadata
-* Use template data for meme preview generation
-
----
-
-## ✨ Planned Features
-
-### 🔍 Meme Browsing
-
-* Display memes in a **Masonry grid layout** (like Pinterest)
-* Responsive design for different screen sizes
-* Handle different image aspect ratios properly
-
-### 🔎 Search Functionality
-
-* Search memes by name
-* Real-time filtering of meme templates
-
-### 🗂️ Category Tabs
-
-* Filter memes based on categories (if applicable)
-* Improve user navigation and discovery
-
-### 📤 Share Feature
-
-* Copy meme link to clipboard
-* Easy sharing functionality
-
-### ⬆️ Back to Top Button
-
-* Smooth scroll functionality
-* Appears after user scrolls down
-
-### 🎨 Meme Creator (Challenge Feature)
-
-* Select a meme template
-* Add custom text inputs
-* Live preview with text overlay on image
+### 🧠 Technical Highlights
+*   **Pure Functional Logic**: All data transformations (searching, filtering, sorting) are implemented using **Array Higher-Order Functions** (`map`, `filter`, `sort`, `forEach`).
+*   **Zero Dependencies**: Built with 100% Vanilla JS, HTML, and CSS.
+*   **Responsive Design**: A custom CSS Grid layout that adapts seamlessly from mobile devices to desktop monitors.
+*   **Performance Optimized**: Uses lazy-loading for images and efficient DOM manipulation.
 
 ---
 
 ## 🛠️ Technologies Used
 
-* **HTML5**
-* **CSS3**
-* **JavaScript (Vanilla / ES6+)**
-* **Fetch API / Axios**
-* **Responsive Design Techniques**
-* (Optional later) Frameworks like **React**
+*   **HTML5 & Semantic Elements**
+*   **CSS3 (Custom Variables, Grid, Flexbox)**
+*   **JavaScript (ES6+, Fetch API, LocalStorage)**
+*   **Public API**: Imgflip API
 
 ---
 
-## 🧱 Project Structure (Planned)
+## ⚙️ How to Run the Project
 
-```
-/meme-factory
-│── index.html
-│── style.css
-│── script.js
-│── /assets
-│── /components
-│── README.md
-```
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/avkashs0521/the-meme-factory.git
+    ```
+2.  **Navigate to the folder**:
+    ```bash
+    cd the-meme-factory
+    ```
+3.  **Run with a local server**:
+    Since the project uses absolute/relative paths and may fetch external resources, it is recommended to use a local server:
+    *   **Using Python**: `python3 -m http.server 3000`
+    *   **Using VS Code**: Right-click `index.html` and select "Open with Live Server".
+    *   **Using Node**: `npx serve`
 
----
-
-## ⚙️ Setup Instructions
-
-1. Clone the repository:
-
-```
-git clone https://github.com/your-username/meme-factory.git
-```
-
-2. Navigate to the project folder:
-
-```
-cd meme-factory
-```
-
-3. Open the project:
-
-* Simply open `index.html` in your browser
-
-*(No additional setup required for Milestone 1)*
+4.  **View in Browser**: Open `http://localhost:3000` (or the port provided by your server).
 
 ---
 
-## 🚀 Future Enhancements
+## 🚀 Deployment
 
-* Add pagination or infinite scroll
-* Save favorite memes (local storage)
-* Dark mode UI
-* Download generated memes
-* Add user authentication (advanced)
+This project is ready to be deployed on platforms like **Vercel** or **Netlify**. Simply connect your GitHub repository and it will deploy as a static site automatically.
 
 ---
-
 
 ## 👤 Author
 
@@ -134,14 +64,6 @@ cd meme-factory
 
 ---
 
-## 📌 Notes
-
-* This milestone focuses on planning and structure
-* Implementation will begin in upcoming milestones
-* The project is designed to scale with additional features over time
-
----
-
 ## ⭐ Acknowledgment
 
-Thanks to **Imgflip API** for providing meme data used in this project.
+Thanks to **Imgflip API** for providing the meme data that powers this factory.
